@@ -9,50 +9,44 @@
 <body>
 
 <header>
+  
+    <!-- Resto del contenido de la barra superior -->
     <div class="top-bar">
         <div class="store-name">Tienda Teléfonos</div>
-        <div class="dropdown">
-            <button class="drop-button">Categorías &#9662;</button>
-            <div class="drop-content">
-                <a href="#">Smartphones</a>
-                <a href="#">Tablets</a>
-                <a href="#">Accesorios</a>
-            </div>
-        </div>
-        <div class="cart-dropdown">
-            <button class="cart-button">&#128722;</button>
-            <div class="cart-content">
-                <!-- Contenido del carrito -->
-            </div>
-        </div>
-        <div class="user-dropdown">
-            <button class="user-button">&#128100;</button>
-            <div class="user-content">
-                <a href="#">Mi Cuenta</a>
-                <a href="#">Configuración</a>
-                <a href="#">Cerrar Sesión</a>
-            </div>
-        </div>
     </div>
+      <div class="top-bar">
+          <div class="store-name">Tienda Teléfonos</div>
+          <input type="text" placeholder="Buscar..." class="search-box"/>
+          <div class="icon-container">
+              <a href="#" class="user-link">&#128100; Cuenta</a>
+              <a href="#" class="cart-link">&#128722; Carrito</a>
+          </div>
+        </div>
 </header>
-
-<main>
+<aside>
     <div class="sidebar">
         <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Teléfonos</a></li>
+            <li class="dropdown">
+                <a href="#" class="drop-button">Teléfonos</a>
+                <div class="dropdown-content">
+                    <a href="#">Smartphones</a>
+                    <a href="#">Básicos</a>
+                    <a href="#">Accesorios</a>
+                </div>
+            </li>
             <li><a href="#">Planes</a></li>
             <li><a href="#">Soporte</a></li>
         </ul>
     </div>
+</aside>
+
+<main>
+   
     <div class="carousel">
-        <!-- Contenido del carrusel 1 -->
-    </div>
-    <div class="carousel">
-        <!-- Contenido del carrusel 2 -->
-    </div>
-    <div class="carousel">
-        <!-- Contenido del carrusel 3 -->
+        <img src="image1.jpg" alt="Imagen 1">
+        <img src="image2.jpg" alt="Imagen 2">
+        <img src="image3.jpg" alt="Imagen 3">
     </div>
 </main>
 
