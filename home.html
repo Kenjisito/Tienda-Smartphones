@@ -1,58 +1,103 @@
-<!DOCTYPE html>
+¿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Teléfonos</title>
-    <link rel="stylesheet" href="css/Estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Teléfonos - Inicio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/Estilos.css">
 </head>
-<body>
+<body style="background-image: url('Imagenes/fondo.jpg'); background-size: cover;">
 
 <header>
-  
-    <!-- Resto del contenido de la barra superior -->
-    <div class="top-bar">
-        <div class="store-name">Tienda Teléfonos</div>
-    </div>
-      <div class="top-bar">
-          <div class="store-name">Tienda Teléfonos</div>
-          <input type="text" placeholder="Buscar..." class="search-box"/>
-          <div class="icon-container">
-              <a href="#" class="user-link">&#128100; Cuenta</a>
-              <a href="#" class="cart-link">&#128722; Carrito</a>
+  <!-- Navbar Completa -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">TiendaMovil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nuevos Lanzamientos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Smartphones</a>
+            <a class="dropdown-item" href="#">Accesorios</a>
+            <a class="dropdown-item" href="#">Reparaciones</a>
           </div>
-        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
-<aside>
-    <div class="sidebar">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li class="dropdown">
-                <a href="#" class="drop-button">Teléfonos</a>
-                <div class="dropdown-content">
-                    <a href="#">Smartphones</a>
-                    <a href="#">Básicos</a>
-                    <a href="#">Accesorios</a>
-                </div>
-            </li>
-            <li><a href="#">Planes</a></li>
-            <li><a href="#">Soporte</a></li>
-        </ul>
-    </div>
-</aside>
 
-<main>
-   
-    <div class="carousel">
-        <img src="image1.jpg" alt="Imagen 1">
-        <img src="image2.jpg" alt="Imagen 2">
-        <img src="image3.jpg" alt="Imagen 3">
+<main role="main">
+
+  <!-- Carrusel de Imágenes -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carrusel... -->
+  </div>
+
+  <!-- Barra de Búsqueda -->
+  <div class="container mt-3">
+    <form class="form-inline justify-content-center">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+      <button class="btn morado-suave-btn my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </div>
+
+  <!-- Bloques de características -->
+  <div class="container marketing">
+    <!-- Tres columnas de texto debajo del carrusel -->
+    <div class="row">
+      <!-- Contenido de ejemplo -->
+    </div><!-- /.row -->
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 text-background shadow-text">
+        <h2 class="featurette-heading">tiendita de Smartphones. <span class="text-muted">tecnologia a tu alcanze.</span></h2>
+        <p class="lead">Descubre el smartphone ideal en TiendaMovil, desde la elegancia de un iPhone hasta la innovación de un Samsung Galaxy, y la relación calidad-precio de Xiaomi. Encuentra tu compañero digital perfecto con nosotros..</p>
+      </div>
+      <div class="col-md-5">
+        <!-- Aquí iría tu imagen, asegúrate de usar una ruta correcta para la imagen o un enlace directo a una en línea -->
+      </div>
     </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <!-- Más secciones aquí -->
+
 </main>
 
-<footer>
-    <!-- Contenido del pie de página -->
+<footer class="container">
+  <p class="float-right"><a href="#">Volver arriba</a></p>
+  <p>© 2024 Tienda de Teléfonos, Inc. · <a href="#">Privacidad</a> · <a href="#">Términos</a></p>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

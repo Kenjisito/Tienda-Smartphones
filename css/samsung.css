@@ -1,28 +1,18 @@
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #cccdd0; /* Cambio del color de fondo a blanco */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombreado para toda la página */
 }
 
 header {
-    background-color: #008577;
-    color: #ffffff;
-    padding: 20px 10%;
-    text-align: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background-color: #34495e;
+    color: #fff;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-content {
-    text-align: left;
-}
-
-.header-content h1 {
-    margin: 0;
 }
 
 .menu-button {
@@ -30,42 +20,89 @@ header {
 }
 
 .dropdown-btn {
-    background-color: transparent;
-    color: #ffffff;
+    background-color: #34495e;
+    color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #4CAF50;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #ffffff;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-btn:hover + .dropdown-content {
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu-button:hover .dropdown-content {
     display: block;
 }
 
-.product-display {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 20px 10%;
+.title {
+    margin: 0;
+    text-align: center;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+    padding: 8px 0;
+}
+
+.user-menu:hover .user-dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+.product-info {
+    background-color: #4374de;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
 .product-info h2 {
     color: #333;
+    text-align: center;
+}
+
+.product-info p {
+    font-size: 16px;
+    color: #555;
 }
 
 .product-info ul {
@@ -74,39 +111,86 @@ header {
 }
 
 .product-info ul li {
-    background-color: #e0e0e0;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+.buy-button,
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.buy-button:hover,
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+.separator {
+    margin-top: 50px;
+    border-top: 2px solid #ccc;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: #fff;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #4d6fbb;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    width: 150%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .carousel {
     display: flex;
-    flex-direction: column;
-    max-width: 300px;
+    width: 25%;
+    transition: transform 3s ease-in-out;
 }
 
 .carousel img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    animation: slide 10s infinite;
-    opacity: 0;
+    width: 5%;
+    height: auto;
+    object-fit: cover;
 }
 
-@keyframes slide {
-    0%, 100% { opacity: 0; }
-    10%, 30% { opacity: 1; }
-}
-
-.carousel img:nth-child(1) {
-    animation-delay: 2s;
-}
-
-.carousel img:nth-child(2) {
-    animation-delay: 4s;
-}
-
-.carousel img:nth-child(3) {
-    animation-delay: 6s;
+/* Animación del carrusel */
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    75% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
