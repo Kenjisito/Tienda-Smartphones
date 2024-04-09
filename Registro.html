@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+
+  <link href="./css/boostrap.min.css" rel="stylesheet">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body class="bg-light">
+
+  <div class=container>
+    <form>
+      <div class="title-md mt-3 mb-4"> <h1>Registro</h1></div>
+      <p class="card-title mb-3">
+        Registro nos permitirá conocerte y no tener que solicitarte los datos nuevamente cuando quieras comprar en
+        TienditadeIrvinz.cl. Los campos marcados (*) deben ser llenados obligatoriamente.
+      </p>
+
+      <div class="mb-3">
+        <label for="exampleInputRut" class="form-label">Rut*</label>
+        <input type="rut" class="form-control" id="exampleInputRut" aria-describedby="rutlHelp">
+        <div id="rutHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Nombre*</label>
+        <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+        <div id="nameHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">E-mail*</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Su información no será compartida</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+        <span id="passwordHelpInline" class="form-text">
+          Debe contener de 8 a 20 caracteres.
+        </span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword2">
+        
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputadress" class="form-label">Dirección*</label>
+        <input type="adress" class="form-control" id="exampleInputAdress">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Número*</label>
+        <input type="number" class="form-control" id="exampleInputNumber">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputComuna" class="form-label">Comuna</label>
+        <input type="comuna" class="form-control" id="exampleInputComuna">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputRegion" class="form-label">Región</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Selecciona una región</option>
+          <option value="1">Región de Arica y Parinacota</option>
+          <option value="2">Región de Tarapacá</option>
+          <option value="3">Región de Antofagasta</option>
+          <option value="4">Región de Atacama</option>
+          <option value="5">Región de Coquimbo</option>
+          <option value="6">TRegión de Valparaíso</option>
+          <option value="7">Región Metropolitana de Santiago</option>
+          <option value="8">Región del Libertador General Bernardo O'Higgins</option>
+          <option value="9">Región del Maule</option>
+          <option value="10">Región de Ñuble</option>
+          <option value="11">Región del Biobío</option>
+          <option value="12">Región de La Araucanía</option>
+          <option value="13">Región de Los Ríos</option>
+          <option value="14">Región de Los Lagos</option>
+          <option value="15">Región de Aysén</option>
+          <option value="16">Región de Magallanes</option>
+        </select>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+
+</body>
+
+
+
+
+</html>
