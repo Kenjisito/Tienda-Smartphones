@@ -15,9 +15,12 @@
 
 <body class="bg-light">
 
+  
   <div class=container>
     <form>
-      <div class="title-md mt-3 mb-4"> <h1>Registro</h1></div>
+      <div class="title-md mt-3 mb-4">
+        <h1>Registro</h1>
+      </div>
       <p class="card-title mb-3">
         Registro nos permitirá conocerte y no tener que solicitarte los datos nuevamente cuando quieras comprar en
         TienditadeIrvinz.cl. Los campos marcados (*) deben ser llenados obligatoriamente.
@@ -42,13 +45,14 @@
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
         <span id="passwordHelpInline" class="form-text">
-          Debe contener de 8 a 20 caracteres.
+          Su contraseña debe contener mínimo 7 dígitos, al menos una letra Mayúscula, números y símbolos tales como
+          @%!*?&
         </span>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
         <input type="password" class="form-control" id="exampleInputPassword2">
-        
+
       </div>
       <div class="mb-3">
         <label for="exampleInputadress" class="form-label">Dirección*</label>
@@ -94,27 +98,6 @@
     </form>
   </div>
   <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (() => {
-      'use strict'
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-
 
 </body>
 
