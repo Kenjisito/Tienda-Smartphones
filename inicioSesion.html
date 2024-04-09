@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio sesion</title>
+
+  <link href="./css/boostrap.min.css" rel="stylesheet">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<header>
+  <a href="./home.html"><button type="button" class="btn btn-primary mt-1">Volver</button>
+  </a>
+</header>
+
+
+<body class="bg-light">
+
+  <div class=container>
+
+    <div class="mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person"
+        viewBox="0 0 16 16">
+        <path
+          d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+        <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+      </svg>
+      <label for="exampleInputEmail1" class="form-label mt-3">Inicio sesion</label>
+
+    </div>
+
+
+    <form>
+      <div class="mb-3 needs-validation" novalidate>
+        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+
+</body>
+
+
+
+
+</html>
