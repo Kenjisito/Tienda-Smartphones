@@ -37,7 +37,7 @@
 
     <form>
       <div class="mb-3 needs-validation" novalidate>
-        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text"></div>
       </div>
@@ -49,30 +49,14 @@
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" class="btn btn-primary">Login</button>
     </form>
   </div>
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (() => {
-      'use strict'
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
+  
+  <div class=" container mt-3">
+    <a href="./Registro.html">No tienes cuenta? Registrate!</a>
+  </div>
+  
 
 
 </body>
