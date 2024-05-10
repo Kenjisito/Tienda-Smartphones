@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #cccdd0; /* Cambio del color de fondo a blanco */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombreado para toda la página */
+    
 }
 
 header {
@@ -171,9 +172,10 @@ main {
 }
 
 .carousel img {
-    width: 5%;
+    width: 200%;
     height: auto;
     object-fit: cover;
+    opacity: 50%;
 }
 
 /* Animación del carrusel */

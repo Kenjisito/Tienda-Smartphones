@@ -9,8 +9,49 @@
   <link href="./css/boostrap.min.css" rel="stylesheet">
   <script src="./js/bootstrap.bundle.min.js"></script>
 
+  <script>
+    function validarFormulario() {
+      var rut = document.getElementById('exampleInputRut').value;
+      var nombre = document.getElementById('exampleInputName1').value;
+      var email = document.getElementById('exampleInputEmail1').value;
+      var password = document.getElementById('exampleInputPassword1').value;
+      var confirmPassword = document.getElementById('exampleInputPassword2').value;
+      var direccion = document.getElementById('exampleInputAdress').value;
+      var numero = document.getElementById('exampleInputNumber').value;
+      var terminos = document.getElementById('exampleCheck1').checked;
 
+      if (!rut) {
+        console.log("El campo de RUT está vacío.");
+      }
+      if (!nombre) {
+        console.log("El campo de nombre está vacío.");
+      }
+      if (!email) {
+        console.log("El campo de email está vacío.");
+      }
+      if (!direccion) {
+        console.log("El campo de dirección está vacío.");
+      }
+      if (!numero) {
+        console.log("El campo de número está vacío.");
+      }
+      if (password.length < 7) {
+        console.log("La contraseña debe tener al menos 7 caracteres.");
+      }
+      if (password !== confirmPassword) {
+        console.log("Las contraseñas no coinciden.");
+      }
+      if (!terminos) {
+        console.log("No se han aceptado los términos y condiciones.");
+      }
 
+      if (!rut || !nombre || !email || !direccion || !numero || password.length < 7 || password !== confirmPassword || !terminos) {
+        alert('Por favor, asegúrate de llenar todos los campos obligatorios correctamente y aceptar los términos y condiciones.');
+        return false;
+      }
+      return true;
+    }
+  </script>
 
 </head>
 
@@ -24,7 +65,7 @@
 
 
   <div class=container>
-    <form>
+    <form onsubmit="return validarFormulario()">
       <div class="title-md mt-3 mb-4">
         <h1>Registro</h1>
       </div>
@@ -35,43 +76,42 @@
 
       <div class="mb-3">
         <label for="exampleInputRut" class="form-label">Rut*</label>
-        <input type="rut" class="form-control" id="exampleInputRut" aria-describedby="rutlHelp">
+        <input type="text" class="form-control" id="exampleInputRut" aria-describedby="rutlHelp" required>
         <div id="rutHelp" class="form-text"></div>
       </div>
       <div class="mb-3">
         <label for="exampleInputName" class="form-label">Nombre*</label>
-        <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+        <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" required>
         <div id="nameHelp" class="form-text"></div>
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">E-mail*</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         <div id="emailHelp" class="form-text">Su información no será compartida</div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="exampleInputPassword1" class="form-label">Contraseña*</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" required>
         <span id="passwordHelpInline" class="form-text">
           Su contraseña debe contener mínimo 7 dígitos, al menos una letra Mayúscula, números y símbolos tales como
           @%!*?&
         </span>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword2">
-
+        <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña*</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputadress" class="form-label">Dirección*</label>
-        <input type="adress" class="form-control" id="exampleInputAdress">
+        <input type="text" class="form-control" id="exampleInputAdress" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputNumber" class="form-label">Número*</label>
-        <input type="number" class="form-control" id="exampleInputNumber">
+        <input type="number" class="form-control" id="exampleInputNumber" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputComuna" class="form-label">Comuna</label>
-        <input type="comuna" class="form-control" id="exampleInputComuna">
+        <input type="text" class="form-control" id="exampleInputComuna">
       </div>
 
       <div class="mb-3">
@@ -98,7 +138,7 @@
       </div>
 
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
         <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
