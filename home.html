@@ -1,4 +1,4 @@
-¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -7,38 +7,55 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/Estilos.css">
 </head>
-<body style="background-image: url('Imagenes/ponyo.webp'); background-size: cover;">
+<body>
 
 <header>
   <!-- Navbar Completa -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">TiendaMovil</a>
+    <a class="navbar-brand" href="home.html">TiendaMovil</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="home.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nuevosLanzamientosDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Nuevos Lanzamientos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="nuevosLanzamientosDropdown">
+            <a class="dropdown-item" href="Apple.html">Apple</a>
+            <a class="dropdown-item" href="Samsung.html">Samsung</a>
+            <a class="dropdown-item" href="Huawei.html">Huawei</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nuevos Lanzamientos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ofertas</a>
+          <a class="nav-link" href="ofertas.html">Ofertas</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categorías
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Smartphones</a>
-            <a class="dropdown-item" href="#">Accesorios</a>
-            <a class="dropdown-item" href="#">Reparaciones</a>
+            <a class="dropdown-item" href="smartphones.html">Smartphones</a>
+            <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+            <a class="dropdown-item" href="reparaciones.html">Reparaciones</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuario
+          </a>
+          <div class="dropdown-menu" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="profile.html">Perfil</a>
+            <a class="dropdown-item" href="settings.html">Configuraciones</a>
+            <a class="dropdown-item" href="logout.html">Cerrar sesión</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="contact.html">Contacto</a>
         </li>
       </ul>
     </div>
@@ -46,7 +63,6 @@
 </header>
 
 <main role="main">
-
   <!-- Carrusel de Imágenes -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Carrusel... -->
@@ -73,8 +89,8 @@
 
     <div class="row featurette">
       <div class="col-md-7 text-background shadow-text">
-        <h2 class="featurette-heading">tiendita de Smartphones. <span class="text-muted">tecnologia a tu alcanze.</span></h2>
-        <p class="lead">Descubre el smartphone ideal en TiendaMovil, desde la elegancia de un iPhone hasta la innovación de un Samsung Galaxy, y la relación calidad-precio de Xiaomi. Encuentra tu compañero digital perfecto con nosotros..</p>
+        <h2 class="featurette-heading">Tiendita de Smartphones. <span class="text-muted">Tecnología a tu alcance.</span></h2>
+        <p class="lead">Descubre el smartphone ideal en TiendaMovil, desde la elegancia de un iPhone hasta la innovación de un Samsung Galaxy, y la relación calidad-precio de Xiaomi. Encuentra tu compañero digital perfecto con nosotros.</p>
       </div>
       <div class="col-md-5">
         <!-- Aquí iría tu imagen, asegúrate de usar una ruta correcta para la imagen o un enlace directo a una en línea -->

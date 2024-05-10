@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas de Celulares</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2>Ofertas de Celulares</h2>
+  <div class="row" id="productos">
+    <!-- Los productos se cargarán aquí -->
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    function cargarProductos() {
+      $.ajax({
+        url: 'https://api.example.com/telefonos', // Cambiar por la URL real de la API
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          var productos = data.products; // Ajustar según la estructura real de respuesta de la API
+          $('#productos').empty(); // Limpiar contenido previo
+          $.each(productos, function(index, producto) {
+            if (index % 3 === 0 && index > 0) {
+              $('#productos').append('<div class="w-100"></div>'); // Añadir divisor de fila si es necesario
+            }
+            var contenido = `
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="${producto.image}" class="card-img-top" alt="${producto.name}">
+                  <div class="card-body">
+                    <h5 class="card-title">${producto.name}</h5>
+                    <p class="card-text">${producto.description}</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            `;
+            $('#productos').append(contenido);
+          });
+        },
+        error: function() {
+          console.error("No se pudieron cargar los productos");
+        }
+      });
+    }
+
+    cargarProductos();
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
