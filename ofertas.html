@@ -1,57 +1,63 @@
+<<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ofertas de Celulares</title>
+  <title>Ofertas</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container mt-4">
-  <h2>Ofertas de Celulares</h2>
-  <div class="row" id="productos">
-    <!-- Los productos se cargarán aquí -->
-  </div>
+  <h1>Ofertas del Día</h1>
+  <div id="ofertas" class="row"></div>
+  <button id="cargarOfertas" class="btn btn-primary mt-3">Cargar Ofertas</button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
   $(document).ready(function() {
-    function cargarProductos() {
+    $('#cargarOfertas').click(function() {
+      cargarOfertas();
+    });
+
+    function cargarOfertas() {
+      // URL de tu JSON
+      var url = 'https://my-json-server.typicode.com/Kenjisito/api_telefon/telefonos';
+      
+      // Limpia el contenedor de ofertas antes de cargar nuevas ofertas
+      $('#ofertas').empty();
+
+      // Realiza la petición AJAX para obtener los datos de las ofertas
       $.ajax({
-        url: 'https://api.example.com/telefonos', // Cambiar por la URL real de la API
+        url: url,
         type: 'GET',
         dataType: 'json',
         success: function(data) {
-          var productos = data.products; // Ajustar según la estructura real de respuesta de la API
-          $('#productos').empty(); // Limpiar contenido previo
-          $.each(productos, function(index, producto) {
-            if (index % 3 === 0 && index > 0) {
-              $('#productos').append('<div class="w-100"></div>'); // Añadir divisor de fila si es necesario
-            }
-            var contenido = `
-              <div class="col-md-4 mb-4">
+          // Recorre los datos y agrega cada oferta al contenedor
+          $.each(data, function(index, oferta) {
+            var ofertaHTML = `
+              <div class="col-md-4 mb-3">
                 <div class="card">
-                  <img src="${producto.image}" class="card-img-top" alt="${producto.name}">
+                  <img src="${oferta.imagen}" class="card-img-top" alt="${oferta.titulo}">
                   <div class="card-body">
-                    <h5 class="card-title">${producto.name}</h5>
-                    <p class="card-text">${producto.description}</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
+                    <h5 class="card-title">${oferta.titulo}</h5>
+                    <p class="card-text">${oferta.descripcion}</p>
+                    <a href="${oferta.enlace}" class="btn btn-primary">Ver oferta</a>
                   </div>
                 </div>
               </div>
             `;
-            $('#productos').append(contenido);
+            $('#ofertas').append(ofertaHTML);
           });
         },
         error: function() {
-          console.error("No se pudieron cargar los productos");
+          // Muestra un mensaje de error si no se pueden cargar las ofertas
+          $('#ofertas').html('<p>No se pueden cargar las ofertas en este momento.</p>');
         }
       });
     }
-
-    cargarProductos();
   });
 </script>
 
